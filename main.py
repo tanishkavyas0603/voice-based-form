@@ -1,10 +1,6 @@
 import sqlite3
-
-# Connect to (or create) a local database file
 conn = sqlite3.connect("form_data.db", check_same_thread=False)
 c = conn.cursor()
-
-# Create table if not exists
 c.execute('''
 CREATE TABLE IF NOT EXISTS users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -38,7 +34,6 @@ def voice_input(prompt=""):
 
 st.title('VOICE-FORM')
 
-# Initialize session state for form fields
 if 'name' not in st.session_state:
     st.session_state.name=""
 if 'email' not in st.session_state:
