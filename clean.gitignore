@@ -1,0 +1,11 @@
+# virtualenv
+venv/
+.env
+__pycache__/
+*.pyc
+
+# sqlite DB + other local data
+form_data.db
+
+# VSCode
+.vscode/
